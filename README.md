@@ -2,9 +2,9 @@
 
 <p float="left">
   <div align=center> <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
-  <div align=center><img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
- <div align=center> <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
-  <div align=center><img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+ <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+ <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+  <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
 </p>
 
 # SemaTyP: a knowledge graph based literature mining method for drug discovery
