@@ -7,6 +7,10 @@
   <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
 </p>
 
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![]("https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif")  |  ![]("https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif")
+
 # SemaTyP: a knowledge graph based literature mining method for drug discovery
 
 This is the source code and data for the task of drug discovery as described in our paper:
