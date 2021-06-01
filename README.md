@@ -1,5 +1,5 @@
 # CELT
-<div align=center><img width="800" height="450" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+<div align=center><img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
 
 # SemaTyP: a knowledge graph based literature mining method for drug discovery
 
