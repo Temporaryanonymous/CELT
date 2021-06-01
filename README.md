@@ -4,7 +4,7 @@
   <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" />
   &nbsp;
     &nbsp;
-  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" /> 
+  <img width="250" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" /> 
     &nbsp;
     &nbsp;
   <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" />
