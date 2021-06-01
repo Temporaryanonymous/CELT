@@ -1,9 +1,12 @@
 # CELT: Using feature layer interactions to improve semantic segmentation models
 
 <p float="left">
-  <img width="200" height="200"  src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" />
+  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" />
+  &nbsp;
   <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" /> 
-  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif0" />
+    &nbsp;
+  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" />
+  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" />
 </p>
 
 
