@@ -1,6 +1,12 @@
 # CELT: Using feature layer interactions to improve semantic segmentation models
-<div align=left><img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
-<div align=center><img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+
+<p float="left">
+  <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+  <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+  <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+  <img width="150" height="150" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/></div>
+</p>
+
 # SemaTyP: a knowledge graph based literature mining method for drug discovery
 
 This is the source code and data for the task of drug discovery as described in our paper:
