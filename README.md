@@ -3,9 +3,10 @@ Solarized dark             |  Solarized Ocean|  Solarized Ocean|  Solarized Ocea
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------
 ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)
 
+Solarized dark             |  Solarized Ocean|  Solarized Ocean|  Solarized Ocean
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------
 ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)
-# SemaTyP: a knowledge graph based literature mining method for drug discovery
+
 
 This is the source code and data for the task of drug discovery as described in our paper:
 ["SemaTyP: a knowledge graph based literature mining method for drug discovery"](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2167-5)
