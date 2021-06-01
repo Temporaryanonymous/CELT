@@ -9,7 +9,7 @@
 
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
-![]"https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"  |  ![]"https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"
+![]https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif  |  ![]https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif
 
 # SemaTyP: a knowledge graph based literature mining method for drug discovery
 
