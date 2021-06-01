@@ -1,6 +1,6 @@
 # CELT: Using feature layer interactions to improve semantic segmentation models
 
-<p float="left">
+<p float="center">
   <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" />
   &nbsp;
     &nbsp;
