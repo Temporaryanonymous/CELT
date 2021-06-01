@@ -1,11 +1,10 @@
 # CELT: Using feature layer interactions to improve semantic segmentation models
-Solarized dark             |  Solarized Ocean|  Solarized Ocean|  Solarized Ocean
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------
-![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)
 
-Solarized dark             |  Solarized Ocean|  Solarized Ocean|  Solarized Ocean
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------
-![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)  |  ![](https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif)
+<p float="left">
+  <img src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" />
+  <img src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" /> 
+  <img src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif0" />
+</p>
 
 
 This is the source code and data for the task of drug discovery as described in our paper:
