@@ -7,7 +7,7 @@
   <img width="200" height="170" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/> 
     &nbsp;
     &nbsp;
-  <img width="200" height="170" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/PSPnet.gif"/>
+  <img width="180" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/PSPnet.gif"/>
     &nbsp;
     &nbsp;
   <img width="200" height="170" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
