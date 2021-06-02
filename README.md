@@ -13,7 +13,7 @@
   <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
     &nbsp;
     &nbsp;
-  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet+.gif"/>
      &nbsp;
     &nbsp;
   <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
