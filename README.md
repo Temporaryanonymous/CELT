@@ -1,28 +1,28 @@
 # CELT: Using feature layer interactions to improve semantic segmentation models
 
 <p float="center">
-  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif" />
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/MANet.gif"/>
   &nbsp;
   &nbsp;
-  <img width="250" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" /> 
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/> 
     &nbsp;
     &nbsp;
-  <img width="250" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" />
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
     &nbsp;
     &nbsp;
-  <img width="150" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" />
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
     &nbsp;
     &nbsp;
-  <img width="250" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet%2B%2B.gif" />
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
      &nbsp;
     &nbsp;
-  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" />
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
      &nbsp;
     &nbsp;
-  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" />
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
      &nbsp;
     &nbsp;
-  <img width="200" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif" />
+  <img width="180" height="160" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
 </p>
 
 
