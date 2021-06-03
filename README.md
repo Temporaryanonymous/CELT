@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <img width="200" height="100" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Figure%20Legend.jpg">
+  <img width="600" height="100" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Figure%20Legend.jpg">
 </p>
 
 This is the source code and data for the task of drug discovery as described in our paper:
