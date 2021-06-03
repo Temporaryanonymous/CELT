@@ -29,8 +29,8 @@
   <img width="550" height="80" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Figure%20Legend.jpg">
 </p>
 
-This is the source code and data for the task of drug discovery as described in our paper:
-CELT: Using feature layer interactions to improve semantic segmentation models
+This is the source code for the method as described in our paper:
+**CELT: Using feature layer interactions to improve semantic segmentation models**
 
 ## Requirements
 * scikit-learn
