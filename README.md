@@ -19,7 +19,7 @@
   <img width="190" height="180" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/DeepLabV3.gif"/>
      &nbsp;
     &nbsp;
-  <img width="180" height="180" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
+  <img width="180" height="180" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Linknet.gif"/>
      &nbsp;
     &nbsp;
   <img width="180" height="180" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Unet.gif"/>
