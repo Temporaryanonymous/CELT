@@ -23,11 +23,10 @@
      &nbsp;
     &nbsp;
   <img width="170" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/PAN.gif"/>
-       &nbsp;
-    &nbsp;
-  <img width="300" height="60" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Figure%20Legend.jpg"/>
 </p>
-
+<p align="center">
+  <img src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Figure%20Legend.jpg">
+</p>
 
 This is the source code and data for the task of drug discovery as described in our paper:
 CELT: Using feature layer interactions to improve semantic segmentation models
