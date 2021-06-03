@@ -23,6 +23,9 @@
      &nbsp;
     &nbsp;
   <img width="170" height="200" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/PAN.gif"/>
+       &nbsp;
+    &nbsp;
+  <img width="400" height="80" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Figure%20Legend.jpg"/>
 </p>
 
 
