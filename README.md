@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <img width="550" height="80" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Figure%20Legend.jpg">
+  <img width="500" height="70" src="https://github.com/Temporaryanonymous/CELT/blob/main/figure/Figure%20Legend.jpg">
 </p>
 
 This is the source code for the method as described in our paper:
