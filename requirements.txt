@@ -1,0 +1,9 @@
+numpy == 1.18.1
+tqdm == 4.59.0
+torchvision>=0.3.0
+pretrainedmodels==0.7.4
+efficientnet-pytorch==0.6.3
+timm==0.3.2
+segmentation-models-pytorch
+albumentations
+opencv-python
