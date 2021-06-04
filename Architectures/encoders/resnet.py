@@ -45,8 +45,7 @@ class ResNetEncoder(ResNet, EncoderMixin):
 
         self._in_channels = 3
 
-        # 两个unfold_layer，将图像变成patch
-        #self.patch_size=10
+        # Two unfold_layer, which convert feature maps (lower and deeper feature maps) to image patchs
         self.patch_size = 10
 
         self.unfold_layer_up = nn.Sequential(
@@ -62,13 +61,10 @@ class ResNetEncoder(ResNet, EncoderMixin):
         self.transformer_layer_up = nn.Transformer(d_model=self.patch_size*self.patch_size, nhead=1, num_encoder_layers=1,num_decoder_layers=1)
         self.transformer_layer_down = nn.Transformer(d_model=self.patch_size*self.patch_size, nhead=1, num_encoder_layers=1,num_decoder_layers=1)
 
-        # 这个很重要！
-        self.linear_layer_1 = torch.nn.Linear(64, 1024, bias=True)
-        #self.linear_layer_1 = torch.nn.Linear(36, 1024, bias=True)
-        self.linear_layer_2 = torch.nn.Linear(1024, self.patch_size * self.patch_size, bias=True)
-        #self.upsampling = torch.nn.ConvTranspose2d(1,2,kernel_size=(1,1))
 
-        #Q1?: 为什么要删除fc和avgpool
+        self.linear_layer_1 = torch.nn.Linear(64, 1024, bias=True)
+        self.linear_layer_2 = torch.nn.Linear(1024, self.patch_size * self.patch_size, bias=True)
+
         del self.fc
         del self.avgpool
 
@@ -92,8 +88,6 @@ class ResNetEncoder(ResNet, EncoderMixin):
 
         x = stages[0](x)
         features.append(x)
-        # stages[0]是Identity()
-        # torch.Size([4, 3, 320, 320])
 
         fold_layer_up = torch.nn.Fold(output_size=(x.size()[-2],x.size()[-1]), kernel_size=(self.patch_size,self.patch_size), stride=(self.patch_size,self.patch_size))
         patch_1 = self.unfold_layer_up(x)
@@ -104,14 +98,9 @@ class ResNetEncoder(ResNet, EncoderMixin):
 
         x = stages[1](x)
         features.append(x)
-        # stages[1] 是 nn.Sequential(self.conv1, self.bn1, self.relu),
-        # torch.Size([4, 64, 160, 160])
 
         x = stages[2](x)
         features.append(x)
-
-        # stages[2] 是 nn.Sequential(self.maxpool, self.layer1),
-        # torch.Size([4, 64, 80, 80])
 
         patch_2 = self.unfold_layer_down(x)
 
@@ -130,8 +119,6 @@ class ResNetEncoder(ResNet, EncoderMixin):
 
         x = stages[3](x)
         features.append(x)
-        # stages[3] 是 self.layer2
-        # torch.Size([4, 128, 40, 40])
 
         x = stages[4](x)
         # torch.Size([4, 256, 20, 20])
@@ -147,42 +134,7 @@ class ResNetEncoder(ResNet, EncoderMixin):
 
         att_patch_1 = self.linear_layer_2(att_patch_1)
 
-        #print(att_patch_1.size())
-        #print(att_patch_1)
-        # torch.Size([4, 256, 16])
-
-        #att_patch_1_sum=softmax(torch.sum(att_patch_1,dim=2))
-        # print(att_patch_1_sum.size())
-        # torch.Size([4, 256])
-
-        #att_patch_1_extend=att_patch_1_sum.unsqueeze(-1).expand_as(patch2_to_patch1)
-        # print(att_patch_1_extend.size())
-        # torch.Size([4, 256, 100])
-
         att_all=att_activation(fold_layer_up(att_patch_1.transpose(1,2)))
-
-        #print("-----------------------")
-        #print(att_patch_1_all.size())
-
-        # torch.Size([4, 1, 160, 160])
-
-        #att_patch_2 = torch.bmm(patch1_to_patch2, patch2_to_patch1.transpose(1, 2))
-
-        #att_patch_2_sum = softmax(torch.sum(att_patch_2, dim=2))
-
-        #att_patch_2_extend = att_patch_2_sum.unsqueeze(-1).expand_as(patch1_to_patch2)
-
-        #att_patch_2_all = att_activation(fold_layer_down(att_patch_2_extend.transpose(1, 2)))
-
-        # print(att_patch_1_all.size())
-        # print(att_patch_2_all.size())
-        # torch.Size([4, 1, 160, 160])
-        # torch.Size([4, 1, 40, 40])
-
-        # features[1] = torch.mul(features[1], att_patch_1_all)
-        #features[1] = features[1]+att_patch_1_all
-        # features[3] = torch.mul(features[3], att_patch_2_all)
-        #features[3] = features[3]+att_patch_2_all
         features.append(att_all)
         return features
 
