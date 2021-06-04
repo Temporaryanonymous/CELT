@@ -39,26 +39,26 @@ In order to make it easier for the readers to reproduce and understand the code,
 
 ## File declaration
 
-**Architecture/encoder**： contains 
-  
-**Architecture/encoder**： contains 
 
-**Architecture/manet**： contains 
+**Architecture/encoder**：contains the encoding part of all eight CELT plugged models.
 
-**Architecture/unet**： contains 
+**Architecture/manet**：the decoder and segmentation part of the manet_celt model.
 
-**Architecture/unetplusplus**： contains 
+**Architecture/unet**： the decoder and segmentation part of the unet_celt model.
 
-**Architecture/deeplabv3**： contains 
+**Architecture/unetplusplus**：the decoder and segmentation part of the unet++_celt model.
 
-**Architecture/fpn**： contains 
+**Architecture/deeplabv3**：the decoder and segmentation part of the deeplabv3_celt model.
 
-**Architecture/pan**： contains 
+**Architecture/fpn**：the decoder and segmentation part of the fpn_celt model.  
 
-**Architecture/linknet**： contains 
+**Architecture/pan**：the decoder and segmentation part of the pan_celt model.
 
-**Architecture/pspnet**： contains 
+**Architecture/linknet**：the decoder and segmentation part of the linknet_celt model.
 
+**Architecture/pspnet**：the decoder and segmentation part of the pspnet_celt model.
+
+**CELT_Unet_CamVid.py**: The Unet model with CELT method, which is used for CamVid dataset. You can change this file to test other models and datasets.
 
 ## Run the codes
 Install the environment.
