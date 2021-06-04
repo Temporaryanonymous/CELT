@@ -30,7 +30,7 @@
 </p>
 
 This is the source code for the method as described in our paper:
-**CELT: Using feature layer interactions to improve semantic segmentation models**. The lines 81-139 of Architecture/encoder/resnet.py are about how to insert CELT into the encoder of the existing segmentation models. You can apply CELT on your own models, which is a simple and very easy to implement idea.
+**CELT: Using feature layer interactions to improve semantic segmentation models**. The lines 81-139 of Architecture/encoders/resnet.py are about how to insert CELT into the encoder of the existing segmentation models. You can apply CELT on your own models, which is a simple and very easy to implement idea.
 
 ## Requirements
 * scikit-learn
