@@ -11,14 +11,14 @@ import os
 if __name__ == '__main__':
     ENCODER = 'resnet34'
     ENCODER_WEIGHTS = 'imagenet'
-    #data_dir = "/home/sang/data/CamVid/"
-    data_dir = "e:/data/CamVid/"
+    # Your data directory
+    data_dir = ""
+
     DEVICE = 'cuda:0'
     CLASSES = ['sky', 'building', 'pole', 'road', 'pavement',
                'tree', 'signsymbol', 'fence', 'car',
                'pedestrian', 'bicyclist','unlabelled']
-    ACTIVATION = 'softmax2d'  # could be None for logits or 'softmax2d' for multicalss segmentation
-
+    ACTIVATION = 'softmax2d'  
     best_model_location = "./checkpoints/camvid/resnet/"
     if not os.path.exists(best_model_location):
         os.makedirs(best_model_location)
@@ -26,12 +26,8 @@ if __name__ == '__main__':
     best_model_location_and_name = best_model_location + "CELT_Unet_CamVid.pth"
 
     ##
-    # 1. 加载数据
+    # 1. Loading data
     ##
-    ##
-    # 配置
-    ##
-    ################################
     CamVidtrans = CamVidTransform()
     preprocessing_fn = encoders.get_preprocessing_fn(ENCODER,ENCODER_WEIGHTS)
 
@@ -66,10 +62,10 @@ if __name__ == '__main__':
     test_dataloader = DataLoader(test_dataset,batch_size=1, shuffle=False, num_workers=1)
 
     ##
-    # 2. 训练模型
+    # 2. Train models
     ##
 
-    # 2.1加载训练模型
+    # 2.1 Loading the trained model if it exists
     if os.path.exists(best_model_location_and_name):
         model = torch.load(best_model_location_and_name)
     else:
@@ -83,7 +79,7 @@ if __name__ == '__main__':
         )
     model.to(DEVICE)
 
-    # 2.2 开始训练
+    # 2.2 start training
     lr = 0.0001
     optimizer =torch.optim.Adam(model.parameters(), lr=lr)
     loss = smp.utils.losses.DiceLoss()
@@ -114,14 +110,6 @@ if __name__ == '__main__':
         device=DEVICE,
     )
     best_iou=0
-    '''
-    log = test_epoch.run(test_dataloader)
-    best_iou=log["iou_score"]
-    print("-------------------------测试结果--------------------------")
-    print("%10s\t%10s\t%10s\t%10s\t%10s\t%10s" % ("IoU score","dice loss","fscore","recall","precision","accuracy"))
-    print("%10.3f\t%10.3f\t%10.3f\t%10.3f\t%10.3f\t%10.3f" % (
-        log["iou_score"], log["dice_loss"], log["fscore"], log["recall"], log["precision"], log["accuracy"]))
-    '''
     for epoch in range(500):
         print("Epoch %d ..." %epoch)
         # train model
@@ -130,14 +118,6 @@ if __name__ == '__main__':
         if best_iou < valid_logs['iou_score']:
             best_iou = valid_logs['iou_score']
             torch.save(model, best_model_location_and_name)
-
-        if epoch == 400:
-            optimizer.param_groups[0]['lr'] = 1e-5
-            print('Decrease decoder learning rate to 1e-5!')
-
-        if epoch == 450:
-            optimizer.param_groups[0]['lr'] = 1e-6
-            print('Decrease decoder learning rate to 1e-6!')
 
         best_iou_cpu = torch.tensor(best_iou, device='cpu').tolist()
         # print(val_accuracy.is_cuda)
@@ -159,6 +139,6 @@ if __name__ == '__main__':
 
     test_logs = test_epoch.run(test_dataloader)
     log = test_logs
-    print("-------------------------测试结果--------------------------")
+    print("-------------------------Testing Results--------------------------")
     print("%.3f\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f" % (
     log["iou_score"], log["dice_loss"], log["fscore"], log["recall"], log["precision"], log["accuracy"]))
