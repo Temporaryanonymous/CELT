@@ -130,12 +130,12 @@ class SkinTransform:
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
-    # same image with different random transforms
     import torch
     ImgTrans = SkinTransform()
+    # Input the directory of your data.
     test_dataset = SkinLesion_Dataset(
-        "E:/data/Skin Lesion/trainx/",
-        "E:/data/Skin Lesion/trainy/",
+        "./image_samples/trainx/",
+        "./image_samples/trainy/",
             augmentation=ImgTrans.get_validation_augmentation(),
             classes= ['skinlesion']
         )
