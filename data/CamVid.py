@@ -41,21 +41,11 @@ class CamVid_Dataset(Dataset):
         # print(image.shape)
         mask = cv2.imread(self.masks_fps[i], 0)
 
-        ##### 调试 ####
-        # mask_t=torch.from_numpy(mask)
-        # print(mask_t.size())
-        # torch.Size([360, 480])
-
 
         # extract certain classes from mask (e.g. cars)
         masks = [(mask == v) for v in self.class_values]
 
         mask = np.stack(masks, axis=-1).astype('float')
-
-        ##### 调试 ####
-        # mask_t=torch.from_numpy(mask)
-        # print(mask_t.size())
-        # torch.Size([360, 480, 12])
 
         # apply augmentations
         if self.augmentation:
@@ -152,9 +142,11 @@ if __name__ == "__main__":
     # same image with different random transforms
     import torch
     ImgTrans = CamVidTransform()
+    
+    # Input the directory of your data
     test_dataset = CamVid_Dataset(
-        "E:/data/CamVid/test/",
-        "E:/data/CamVid/testannot/",
+        "./image_samples/CamVid/test/",
+        "./image_samples/CamVid/testannot/",
             augmentation=ImgTrans.get_validation_augmentation(),
         # classes= ['sky', 'building', 'pole', 'road', 'pavement','tree', 'signsymbol', 'fence', 'car', 'pedestrian', 'bicyclist', 'unlabelled']
         classes= ['sky', 'building', 'pole', 'road', 'pavement',
@@ -162,18 +154,6 @@ if __name__ == "__main__":
                'pedestrian', 'bicyclist', 'unlabelled']
         )
 
-    import sys
-    sys.path.append("..")
-    from utils.visualize import *
-    from utils.show import *
-    for i in [1,3,5,7,12,43]:
-        img,gt=test_dataset[i]
-        print(torch.from_numpy(img).size())
-        show=PresentImages()
-        show.show(torch.from_numpy(img))
-        #print(torch.from_numpy(gt).size())
-        gt_temp=mask2img_camvid(gt)
-        show.show(torch.from_numpy(gt_temp))
 
 
 
