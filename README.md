@@ -30,11 +30,34 @@
 </p>
 
 This is the source code for the method as described in our paper:
-**CELT: Using feature layer interactions to improve semantic segmentation models**. The lines 81-139 of Architecture/encoder/resnet.py are about how to insert CELT into the encoder of the existing segmentation models. You can apply CELT on your own models, which is a very easy idea to method.
+**CELT: Using feature layer interactions to improve semantic segmentation models**. The lines 81-139 of Architecture/encoder/resnet.py are about how to insert CELT into the encoder of the existing segmentation models. You can apply CELT on your own models, which is a very easy idea to implement.
 
 ## Data
 
 In order to make it easier for the readers to reproduce and understand the code, we have provided a small amount of example data used in our experiment under the **image_samples** folder, where each dataset (CamVid, Skin Lesion, CUB Birds) provides five training, validation and test images.
+
+
+## File declaration
+
+**Architecture/encoder**： contains 
+  
+**Architecture/encoder**： contains 
+
+**Architecture/manet**： contains 
+
+**Architecture/unet**： contains 
+
+**Architecture/unetplusplus**： contains 
+
+**Architecture/deeplabv3**： contains 
+
+**Architecture/fpn**： contains 
+
+**Architecture/pan**： contains 
+
+**Architecture/linknet**： contains 
+
+**Architecture/pspnet**： contains 
 
 
 ## Run the codes
@@ -47,18 +70,3 @@ Train and test the model.
 ```bash
 python CELT_Unet_CamVid.py
 ```
-
-
-## File declaration
-
-**data/SemmedDB**： contains all relations extracted from SemmedDB, which are used for constructing the Knowledge Graph in our experiment. The whole "predications.txt" contains **39,133,975** relations, we just leave a small sample "predications.txt" file here which contain **100** relation. The whole "predications.txt" file coule be downloaded from 
-  
-**data/TTD**： contains the drug, target and disease relations retrieved from Theraputic Target Database.
-    
-**experimental_data.py**: constuct the drug-target-disease associations from TTD and Knowledge Graph.
-
-**knowledge_graph.py**: construct the Knowledge Graph used in our experiment.
- 
-**data_loader.py**：used to load traing and test data.
-
-**main.py**：used to train and test the models
