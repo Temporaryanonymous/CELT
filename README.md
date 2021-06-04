@@ -34,9 +34,8 @@ This is the source code for the method as described in our paper:
 
 ## Data
 
-In order to use the code, you have to provide 
-* [Theraputic Target Database](http://db.idrblab.net/ttd/full-data-download)  You don't need to download by yourself, I have uploaded all the TTD 2016 version in *<./data/TTD>*. 
-* [SemedDB](https://skr3.nlm.nih.gov/SemMedDB/) **You need to download from [here](https://pan.baidu.com/s/1zuOELNGAua6i523_nLK6mw)** with password:1234 to obtain the whole knowledge graph. After downloading the "predications.txt" file, please replace the file *<./data/SemedDB/predications.txt>*. with this **new** downloaded file. 
+In order to make it easier for the readers to reproduce and understand the code, we have provided a small amount of example data used in our experiment under the **image_samples** folder, where each dataset (CamVid, Skin Lesion, CUB Birds) provides five training, validation and test images.
+
 
 ## Run the codes
 Install the environment.
@@ -44,21 +43,10 @@ Install the environment.
 pip install -r requirements.txt
 ```
 
-Construct training and test data.
-```bash
-python experimental_data.py
-```
-
 Train and test the model.
 ```bash
-python main.py
+python CELT_Unet_CamVid.py
 ```
-
-## Illustration of feature selection
-<div align=center><img width="800" height="300" src="https://github.com/ShengtianSang/SemaTyP/blob/main/figures/Illustration_of_Feature_selection.jpg"/></div>
-<p align="center">
-An illustration of the features constructed in our work.
-</p>
 
 
 ## File declaration
@@ -74,5 +62,3 @@ An illustration of the features constructed in our work.
 **data_loader.py**：used to load traing and test data.
 
 **main.py**：used to train and test the models
-
-
