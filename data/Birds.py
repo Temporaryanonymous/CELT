@@ -5,7 +5,6 @@ import numpy as np
 import albumentations as albu
 
 class Bird_Dataset(Dataset):
-    #CLASSES = ['bird', 'unlabeled']
     CLASSES = ['bird']
 
     def __init__(
@@ -29,8 +28,6 @@ class Bird_Dataset(Dataset):
         # convert str names to class values on masks
         self.class_values = [self.CLASSES.index(cls.lower()) for cls in classes]
 
-        # print(self.class_values)
-        # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
         self.augmentation = augmentation
         self.preprocessing = preprocessing
 
@@ -47,22 +44,10 @@ class Bird_Dataset(Dataset):
         # print(image.shape)
         mask = cv2.imread(self.masks_fps[i], 0)
 
-
-        ##### 调试 ####
-        # mask_t=torch.from_numpy(mask)
-        # print(mask_t.size())
-        # torch.Size([360, 480])
-
-
         # extract certain classes from mask (e.g. cars)
         masks = [(mask == v) for v in self.class_values]
 
         mask = np.stack(masks, axis=-1).astype('float')
-
-        ##### 调试 ####
-        # mask_t=torch.from_numpy(mask)
-        # print(mask_t.size())
-        # torch.Size([360, 480, 12])
 
         # apply augmentations
         if self.augmentation:
@@ -153,33 +138,4 @@ class BirdTransform:
             albu.Lambda(image=self.to_tensor, mask=self.to_tensor),
         ]
         return albu.Compose(_transform)
-
-
-if __name__ == "__main__":
-    # same image with different random transforms
-    import torch
-    ImgTrans = BirdTransform()
-    test_dataset = Bird_Dataset(
-        "E:/data/Birds/train/images/",
-        "E:/data/Birds/train/GroundTruth/",
-        augmentation=ImgTrans.get_validation_augmentation(),
-        # classes= ['sky', 'building', 'pole', 'road', 'pavement','tree', 'signsymbol', 'fence', 'car', 'pedestrian', 'bicyclist', 'unlabelled']
-        classes= ['bird']
-        )
-
-    import sys
-    sys.path.append("..")
-    from utils.visualize import *
-    from utils.show import *
-    for i in [1,3,5,7,12,43]:
-        img,gt=test_dataset[i]
-        print(torch.from_numpy(img).size())
-        show=PresentImages()
-        show.show(torch.from_numpy(img))
-        #print(torch.from_numpy(gt).size())
-        gt_temp=mask2img_bird(gt)
-        show.show(torch.from_numpy(gt_temp))
-
-
-
 
