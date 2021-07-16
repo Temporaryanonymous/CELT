@@ -12,7 +12,7 @@ if __name__ == '__main__':
     ENCODER = 'resnet34'
     ENCODER_WEIGHTS = 'imagenet'
     # Your data directory
-    data_dir = ""
+    data_dir = "image_samples/CamVid/"
 
     DEVICE = 'cuda:0'
     CLASSES = ['sky', 'building', 'pole', 'road', 'pavement',
