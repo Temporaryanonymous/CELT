@@ -3,8 +3,7 @@ import torch.nn as nn
 from typing import List
 from collections import OrderedDict
 
-import SS_1.Architectures.encoders._utils as utils
-
+import CELT.Architectures.encoders._utils as utils
 
 class EncoderMixin:
     """Add encoder functionality such as:
